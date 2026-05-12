@@ -43,6 +43,11 @@ def fetch_real_data(self, start_date, end_date, data_type):
 
     # Making the request to get the authentication
     res = self.session.post(GWTBaseURL, data=body, headers=header)
+    
+    print("STATUS:", res.status_code)
+    print("URL:", res.url)
+    print("HEADERS:", res.headers)
+    print("BODY:", res.text[:1000])
 
     # Extract the value of the "sesnonce" cookie
     sesnonce_cookie = self.session.cookies.get("sesnonce")
