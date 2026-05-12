@@ -1,4 +1,5 @@
 import io
+import re
 
 
 def fetch_real_data(self, start_date, end_date, data_type):
